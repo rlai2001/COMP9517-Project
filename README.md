@@ -13,7 +13,7 @@ The goal is to evaluate the strengths and limitations of deep learning versus tr
 **SkyView Dataset (Kaggle)**  
 15 aerial classes × 800 images per class = 12,000 images total.
 
-> 🔗 Download from: [https://www.kaggle.com/datasets/majedw/satellite-image-classification](https://www.kaggle.com/datasets/majedw/satellite-image-classification)
+> 🔗 Download from: [https://www.kaggle.com/datasets/ankit1743/skyview-an-aerial-landscape-dataset]
 
 After downloading, organize it as follows:
 ```
