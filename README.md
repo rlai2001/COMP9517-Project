@@ -9,6 +9,25 @@ This project implements and compares three classification approaches on the SkyV
 
 The goal is to evaluate the strengths and limitations of deep learning versus traditional feature-based methods for remote sensing scene classification.
 
+## Dataset
+**SkyView Dataset (Kaggle)**  
+15 aerial classes × 800 images per class = 12,000 images total.
+
+> 🔗 Download from: [https://www.kaggle.com/datasets/majedw/satellite-image-classification](https://www.kaggle.com/datasets/majedw/satellite-image-classification)
+
+After downloading, organize it as follows:
+```
+skyview_dataset/
+└── split/
+    ├── train/
+    └── test/
+```
+Each `train/` and `test/` directory should contain 15 class folders: `Agriculture`, `Airport`, ..., `River`
+
+Dataset is **not included** in this repository to keep the size minimal.
+
+---
+
 ## Directory Structure
 ```
 project_root/
@@ -19,29 +38,39 @@ project_root/
 ├── report/               # Final report, figures, and demo video
 └── README.md
 ```
+## Method 1: CNN
+## Method 2: KNN
+## Method 3:
 
-## How to Run
+## Method 4: ResNet18 (by Richard Lai)
 
-### 1. Train ResNet18
+This implementation fine-tunes a pretrained ResNet18 on the SkyView dataset.
+
+### Key Features
+- Pretrained on ImageNet (`weights=IMAGENET1K_V1`)
+- Custom classifier head for 15 output classes
+- Tracked training & validation metrics:
+  - Loss
+  - Accuracy
+  - F1 Score
+- Confusion matrix & classification report saved per epoch
+- Best model checkpoint saved automatically
+
+### File:
+- `scripts/train_resnet.py`
+
+### How to Run
 ```bash
-python scripts/train_resnet.py --data_dir path/to/split --epochs 10
+python scripts/train_resnet.py --data_dir skyview_dataset/split --epochs 10 --batch_size 32
 ```
+Output will be saved to:
+- `models/`: All model checkpoints (including `best_model.pth`)
+- `outputs/`: 
+  - Classification reports per epoch
+  - Confusion matrices
+  - `training_curves.png`
 
-### 2. Evaluate ResNet18 Model
-```bash
-python scripts/eval_model.py --model_path models/resnet_epoch10.pth
-```
-
-### 3. Train CNN
-```bash
-python scripts/train_cnn.py --epochs 15
-```
-
-### 4. Run KNN Classifier
-```bash
-python scripts/run_knn.py --features sift
-```
-
+---
 ## Dependencies
 - Python 3.10+
 - PyTorch
@@ -50,15 +79,31 @@ python scripts/run_knn.py --features sift
 - matplotlib
 - tqdm
 
-Install all dependencies using:
+Install via:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Results
-- All training curves (loss, accuracy, F1) are saved to: `outputs/training_curves.png`
-- Confusion matrices are saved per epoch to: `outputs/confusion_matrix_epoch*.png`
+If training ResNet, ensure you have:
+- PyTorch (with GPU support if possible)
+- torchvision
+- scikit-learn
+---
+
+## Results 
+
+**(ResNet18)**
+Final evaluation:
+- Accuracy: ~94%
+- Macro F1: ~94%
+- Most confusion: between Airport vs Port, Grassland vs Forest
+
+Visuals:
+-  Confusion matrices are saved to: `outputs/confusion_matrixResnet.png`
+- All training curves (loss, accuracy, F1) are saved to: `outputs/training_curvesResnet.png`
 - Final classification reports are saved to: `outputs/classification_report_epoch*.txt`
+---
+
 
 ## Contributors
 | Name         | zID       | Contribution                   |
