@@ -5,6 +5,7 @@ This project implements and compares three classification approaches on the SkyV
 
 - **CNN**:
 - **KNN**:
+- **DenseNet-121**: 
 - **ResNet18**: Transfer learning using a pretrained ResNet18 from PyTorch, modified for multi-class classification.
 
 The goal is to evaluate the strengths and limitations of deep learning versus traditional feature-based methods for remote sensing scene classification.
@@ -40,9 +41,8 @@ project_root/
 ```
 ## Method 1: CNN
 ## Method 2: KNN
-## Method 3:
-
-## Method 4: ResNet18 (by Richard Lai)
+## Method 3 (Deep Learning): DenseNet-121 (by Xinbo Li)
+## Method 4 (Deep Learning): ResNet18 (by Richard Lai)
 
 This implementation fine-tunes a pretrained ResNet18 on the SkyView dataset.
 
@@ -91,6 +91,7 @@ If training ResNet, ensure you have:
 ---
 
 ## Results 
+**(DenseNet-121)**
 
 **(ResNet18)**
 Final evaluation:
@@ -110,7 +111,7 @@ Visuals:
 |--------------|-----------|--------------------------------|
 | Teammate     | zxxxxxx   | CNN training & analysis        |
 | Teammate     | zxxxxxx   | KNN pipeline & feature methods |
-| Teammate     | zxxxxxx   |                                |
+| Jinbo Li     | z5496624  | DenseNet-121                   |
 | Richard Lai  | zxxxxxx   | ResNet18 model + evaluation    |     
 
 ## Report and Submission
