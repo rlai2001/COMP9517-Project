@@ -109,10 +109,11 @@ Visuals:
 ## Contributors
 | Name         | zID       | Contribution                   |
 |--------------|-----------|--------------------------------|
-| Teammate     | zxxxxxx   | CNN training & analysis        |
-| Teammate     | zxxxxxx   | SVM pipeline & feature methods |
+| Qiyun Li     | z5504759  | ViT-Base-224                   |
+| Shixun Li    | z5505146  | Swin-Base-224 and CNN (Basic)  |
+| Junle Zhao   | z5447039  | SVM                            |
 | Jinbo Li     | z5496624  | DenseNet-121                   |
-| Richard Lai  | zxxxxxx   | ResNet18 model + evaluation    |     
+| Richard Lai  | z5620374  | ResNet18 model                 |     
 
 ## Report and Submission
 - Final Report: `report/Final_Report.pdf`
