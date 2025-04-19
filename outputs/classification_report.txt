@@ -1,0 +1,21 @@
+              precision    recall  f1-score   support
+
+ Agriculture       0.97      0.89      0.93       160
+     Airport       0.95      0.74      0.83       160
+       Beach       0.83      0.99      0.90       160
+        City       0.86      0.94      0.90       160
+      Desert       0.87      0.96      0.91       160
+      Forest       0.99      0.96      0.97       160
+   Grassland       0.85      0.99      0.91       160
+     Highway       0.95      0.93      0.94       160
+        Lake       1.00      0.82      0.90       160
+    Mountain       0.98      0.78      0.87       160
+     Parking       0.92      0.96      0.94       160
+        Port       0.93      0.95      0.94       160
+     Railway       0.79      0.96      0.87       160
+ Residential       1.00      0.86      0.92       160
+       River       0.85      0.92      0.88       160
+
+    accuracy                           0.91      2400
+   macro avg       0.92      0.91      0.91      2400
+weighted avg       0.92      0.91      0.91      2400
