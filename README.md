@@ -4,7 +4,7 @@
 This project implements and compares three classification approaches on the SkyView dataset:
 
 - **CNN**:
-- **KNN**:
+- **SVM**:
 - **DenseNet-121**: 
 - **ResNet18**: Transfer learning using a pretrained ResNet18 from PyTorch, modified for multi-class classification.
 
@@ -40,7 +40,7 @@ project_root/
 └── README.md
 ```
 ## Method 1: CNN
-## Method 2: KNN
+## Method 2: SVM
 ## Method 3 (Deep Learning): DenseNet-121 (by Xinbo Li)
 ## Method 4 (Deep Learning): ResNet18 (by Richard Lai)
 
@@ -110,7 +110,7 @@ Visuals:
 | Name         | zID       | Contribution                   |
 |--------------|-----------|--------------------------------|
 | Teammate     | zxxxxxx   | CNN training & analysis        |
-| Teammate     | zxxxxxx   | KNN pipeline & feature methods |
+| Teammate     | zxxxxxx   | SVM pipeline & feature methods |
 | Jinbo Li     | z5496624  | DenseNet-121                   |
 | Richard Lai  | zxxxxxx   | ResNet18 model + evaluation    |     
 
