@@ -39,10 +39,12 @@ project_root/
 ├── report/               # Final report, figures, and demo video
 └── README.md
 ```
-## Method 1: CNN
-## Method 2: SVM
-## Method 3 (Deep Learning): DenseNet-121 (by Xinbo Li)
-## Method 4 (Deep Learning): ResNet18 (by Richard Lai)
+## Method 1: Swin Transformer
+## Method 2: Vision Transformer (ViT)
+## Method 3: DenseNet-121
+## Method 4: ResNet18
+## Method 5: SVM
+## Method 6: CNN (Basic)
 
 This implementation fine-tunes a pretrained ResNet18 on the SkyView dataset.
 
