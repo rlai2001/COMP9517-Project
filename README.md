@@ -12,10 +12,10 @@ The goal is to evaluate the strengths and limitations of deep learning versus tr
 ## Directory Structure
 ```
 project_root/
-├── models/               # Saved PyTorch .pth model weights
+├── models/               
 ├── outputs/              # Evaluation plots, confusion matrices, reports
-├── scripts/              # Python scripts for training and evaluation
-├── skyview_dataset/      # Dataset folder with train/test split
+├── scripts/              # Python scripts for training
+├── skyview_dataset/      # Redirectory to the original dataset
 ├── report/               # Final report, figures, and demo video
 └── README.md
 ```
