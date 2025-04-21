@@ -3,12 +3,12 @@
 ## Overview
 This project implements and compares six classification approaches on the SkyView dataset:
 
-- **ViT-Base-224**:
-- **Swin-Base-224**:
-- **DenseNet-121**: 
-- **ResNet18**: Transfer learning using a pretrained ResNet18 from PyTorch, modified for multi-class classification.
-- **Plus_Extreme_CNN**:
-- **SVM**:
+- **ViT-Base-224**
+- **Swin-Base-224**
+- **DenseNet-121** 
+- **ResNet18**
+- **Plus_Extreme_CNN**
+- **SVM**
 
 The goal is to evaluate the strengths and limitations of deep learning versus traditional feature-based methods for remote sensing scene classification.
 
@@ -41,12 +41,21 @@ project_root/
 ├── report/               # Final report, figures, and demo video
 └── README.md
 ```
-## Method 1: Swin-Base-224 (Swin Transformer)
-## Method 2: ViT-Base-224 (Vision Transformer)
-## Method 3: DenseNet-121
-## Method 4: ResNet18
-## Method 5: Plus_Extreme_CNN
-## Method 6: SVM
+## Methods Implemented
+
+The project includes the implementation and evaluation of the following models:
+
+### Traditional Machine Learning
+- Support Vector Machine (SVM) with handcrafted features
+
+### Deep Learning Models (Transfer Learning)
+- ResNet-18
+- DenseNet-121
+- Vision Transformer (ViT-Base-224)
+- Swin Transformer (Swin-Base-224)
+- Plus_Extreme_CNN (custom CNN variant)
+
+Each model was trained on 80% of the dataset and validated on the remaining 20%. Evaluation metrics include accuracy, precision, recall, and F1-score.
 
 This implementation fine-tunes a pretrained ResNet18 on the SkyView dataset.
 
@@ -109,22 +118,43 @@ Visuals:
 - Final classification reports are saved to: `outputs/classification_report_epoch*.txt`
 ---
 
+## Group Members and Contributions
 
-## Contributors
-| Name         | zID       | Contribution                   |
-|--------------|-----------|--------------------------------|
-| Qiyun Li     | z5504759  | ViT-Base-224                   |
-| Shixun Li    | z5505146  | Swin-Base-224 and CNN (Basic)  |
-| Junle Zhao   | z5447039  | SVM                            |
-| Jinbo Li     | z5496624  | DenseNet-121                   |
-| Richard Lai  | z5620374  | ResNet18 model                 |     
+| Name           | Student ID | Contribution                          |
+|----------------|------------|----------------------------------------|
+| **Shixun Li**  | z5505146   | Swin-Base-224, Plus_Extreme_CNN       |
+| **Qiyun Li**   | z5504759   | Vision Transformer (ViT-Base-224)     |
+| **Xinbo Li**   | z5496624   | DenseNet-121                          |
+| **Richard Lai**| z5620374   | ResNet-18                             |
+| **Junle Zhao** | z5447039   | SVM with traditional features         |   
 
 ## Report and Submission
 - Final Report: `report/Final_Report.pdf`
 - Project Video: `report/demo.mp4`
+
+## How to Run
+
+bash
+# Step 1: Clone the repository
+git clone https://github.com/rlai2001/COMP9517-Project.git
+cd COMP9517-Project
+
+# Step 2: Create a virtual environment (optional)
+python -m venv venv
+source venv/bin/activate  # For Windows: venv\\Scripts\\activate
+
+# Step 3: Install dependencies
+pip install -r requirements.txt
+
+# Step 4: Execute training scripts
+python train_resnet.py
+python train_densenet.py
+# COMP9517 T1 2025 Group Project - Aerial Scene Classification
 
 ## Acknowledgements
 - Dataset: SkyView Aerial Imagery (Kaggle)
 - Pretrained model: torchvision.models.resnet18
 - Traditional feature extraction: OpenCV SIFT / LBP
 
+This repository contains the code and documentation for the COMP9517 Computer Vision group project at UNSW, Term 1 2025.  
+The objective of this project is to develop and compare multiple computer vision methods for the classification of aerial landscape imagery into 15 predefined categories.
