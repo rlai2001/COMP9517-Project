@@ -1,12 +1,14 @@
 # COMP9517 Group Project: Remote Sensing Image Classification
 
 ## Overview
-This project implements and compares three classification approaches on the SkyView dataset:
+This project implements and compares six classification approaches on the SkyView dataset:
 
-- **CNN**:
-- **SVM**:
+- **ViT-Base-224**:
+- **Swin-Base-224**:
 - **DenseNet-121**: 
 - **ResNet18**: Transfer learning using a pretrained ResNet18 from PyTorch, modified for multi-class classification.
+- **Plus_Extreme_CNN**:
+- **SVM**:
 
 The goal is to evaluate the strengths and limitations of deep learning versus traditional feature-based methods for remote sensing scene classification.
 
@@ -16,7 +18,7 @@ The goal is to evaluate the strengths and limitations of deep learning versus tr
 
 > 🔗 Download from: [https://www.kaggle.com/datasets/ankit1743/skyview-an-aerial-landscape-dataset]
 
-After downloading, organize it as follows:
+After downloading, organise it as follows:
 ```
 skyview_dataset/
 └── split/
@@ -39,12 +41,12 @@ project_root/
 ├── report/               # Final report, figures, and demo video
 └── README.md
 ```
-## Method 1: Swin Transformer
-## Method 2: Vision Transformer (ViT)
+## Method 1: Swin-Base-224 (Swin Transformer)
+## Method 2: ViT-Base-224 (Vision Transformer)
 ## Method 3: DenseNet-121
 ## Method 4: ResNet18
-## Method 5: SVM
-## Method 6: CNN (Basic)
+## Method 5: Plus_Extreme_CNN
+## Method 6: SVM
 
 This implementation fine-tunes a pretrained ResNet18 on the SkyView dataset.
 
